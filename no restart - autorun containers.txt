@@ -1,0 +1,16 @@
+//Show all containers
+docker ps -a
+
+//Set no restart
+docker update --restart=no elasticsearch_container
+docker update --restart=no redis_container
+docker update --restart=no postgres_container
+docker update --restart=no rabbitmq_container
+docker update --restart=no mysql_container
+docker update --restart=no mongodb_container
+docker update --restart=no oracle_23ai_free
+
+//Shows restart policy
+docker inspect -f '{{.Name}}: {{.HostConfig.RestartPolicy.Name}}' $(docker ps -a -q)
+
+
