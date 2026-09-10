@@ -1,3 +1,4 @@
+#!/bin/sh
 # Connect to the container
 docker exec -it postgres_common bash
 
@@ -10,7 +11,6 @@ DROP TABLE IF EXISTS "Users";
 \q
 
 exit
-
 
 # Show tables
 \dt
