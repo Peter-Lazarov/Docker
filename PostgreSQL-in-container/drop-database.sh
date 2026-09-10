@@ -1,3 +1,4 @@
+#!/bin/sh
 # PostgreSQL, container name - postgres_movement, user - movement, database - movementdb,
 docker exec -it postgres_movement bash
 psql -U movement -d postgres
